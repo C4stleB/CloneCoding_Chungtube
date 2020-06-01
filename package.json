@@ -1,0 +1,19 @@
+{
+  "name": "clonecoding_wetube",
+  "version": "1.0.0",
+  "description": "Cloning Youtube with Vanilla and NodeJS",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/C4stleB/CloneCoding_Wetube.git"
+  },
+  "author": "Chung Jeon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/C4stleB/CloneCoding_Wetube/issues"
+  },
+  "homepage": "https://github.com/C4stleB/CloneCoding_Wetube#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
