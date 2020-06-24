@@ -19,7 +19,9 @@
     }
     .social-login--github {
       background-color: $black;
-      color: white;
+      a{
+        color: white;
+      }
     }
     .social-login--facebook {
       background-color: #3a5998;
