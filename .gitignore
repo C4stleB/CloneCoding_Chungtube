@@ -112,3 +112,4 @@ temp/
 package-lock.json
 uploads
 static
+build
