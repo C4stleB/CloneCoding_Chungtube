@@ -51,17 +51,14 @@
   "scripts": {
     "dev:server": "nodemon --exec babel-node src/init.js --delay 2 --ignore '.scss' ",
     "dev:assets": "cd src && cross-env WEBPACK_ENV=development webpack -w",
-    "build:assets": "cd src && cross-env WEBPACK_ENV=production webpack",
+    "build:assets": "cd src && WEBPACK_ENV=production webpack",
     "build:server": "babel src --out-dir build --ignore 'src/assets','src/static','src/webpack.config.js'",
     "tunnel": "lt -h http://serverless.social -p 4000",
     "copyAll": "cp -rf src/static build; cp -rf src/views build",
     "build": "npm run build:server && npm run build:assets && npm run copyAll",
     "prebuild": "rm -rf build",
-    "start": "node build/init.js",
-    "prestart": "npm run build",
-    "winBuild": "npm run build:server && npm run build:assets",
-    "winCopyAll": "cp -R -fo src/static build; cp -R -fo src/views build",
-    "winRemoveOld": "rm -R -fo build"
+    "start": "PRODUCTION=true node build/init.js",
+    "prestart": "npm run build"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
