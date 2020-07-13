@@ -9,19 +9,16 @@ html
         link(rel="shortcut icon", href="#")
     body
         if messages.error
-            span=messages.error
             +message({
                 type:'error',
                 text:messages.error
             })
         else if messages.info
-            span=messages.info
             +message({
                 type:'info',
                 text:messages.info
             })
         else if messages.success
-            span=messages.success
             +message({
                 type:'success',
                 text:messages.success
