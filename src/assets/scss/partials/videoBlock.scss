@@ -1,5 +1,6 @@
 .videoBlock {
-  background-color: grey;
+  a{
+    color: $mainColor;
     video {
       margin-bottom: 10px;
       max-width: 100%;
@@ -7,7 +8,9 @@
     }
     .videoBlock__title {
       font-size: 18px;
-      font-weight: 300;
+      font-weight: 500;
       margin-bottom: 10px;
     }
+
+  }
   }
