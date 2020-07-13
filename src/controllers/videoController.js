@@ -57,7 +57,6 @@ export const videoDetail = async(req, res) => {
     params: {id}
   } = req;
   try{
-    await fetch(`/api/${id}/view`, { method: "POST" });
     const video = await (Video.findById(id).populate("creator")).populate("comments");
     res.render("videoDetail", { pageTitle: video.title, video });
   } catch(error) {
