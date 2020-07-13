@@ -6,7 +6,7 @@ block content
         //- +videoPlayer({
         //-     src:video.fileUrl
         //- })
-        video.videoPlayer#jsVideoPlayer(src=video.fileUrl, controls=true)
+        video.videoPlayer(src=video.fileUrl, controls=true)
         .video__info
             if loggedUser && video.creator.id === loggedUser.id
                 a(href=routes.editVideo(video.id)) 
