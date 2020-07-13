@@ -57,8 +57,8 @@ export const videoDetail = async(req, res) => {
     params: {id}
   } = req;
   try{
-    const video = await (Video.findById(id).populate("creator")).populate("comments");
     await fetch(`/api/${id}/view`, { method: "POST" });
+    const video = await (Video.findById(id).populate("creator")).populate("comments");
     res.render("videoDetail", { pageTitle: video.title, video });
   } catch(error) {
     console.log(error);
@@ -130,7 +130,6 @@ export const postRegisterView = async (req, res) => {
     video.save();
     res.status(200);
   } catch(error){
-    console.log(error);
     res.status(400);
   } finally{
     res.end();
