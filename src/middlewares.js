@@ -25,7 +25,7 @@ const s3 = new aws.S3({
   });
   
 export const localsMiddleWare = (req, res, next) => {
-    res.locals.siteName = 'WeTube';
+    res.locals.siteName = 'ChungTube';
     res.locals.routes = routes;
     res.locals.loggedUser = req.user || null;
     next();
