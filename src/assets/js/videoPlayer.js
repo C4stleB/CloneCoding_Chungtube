@@ -123,11 +123,20 @@ function handleDrag(){
 
 }
 
+function handleTimeUpdate() {
+    const progressPercent = Math.floor(
+      (videoPlayer.currentTime / videoPlayer.duration) * 100
+    );
+  
+    progressBar.style.width = `${progressPercent}%`;
+  }
+
 function init(){
     videoPlayer.volume = 0.5;
     playBtn.addEventListener("click", handlePlayClick);
     volumeBtn.addEventListener("click", handleVolumeClick);
     fullscreenBtn.addEventListener("click", goFullScreen);
+    videoPlayer.addEventListener("timeupdate", handleTimeUpdate);
     videoPlayer.addEventListener("loadedmetadata", setTotalTime);
     videoPlayer.addEventListener("ended", handleEnded);
     volumeRange.addEventListener("input", handleDrag);
