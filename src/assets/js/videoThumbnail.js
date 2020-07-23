@@ -1,5 +1,5 @@
-const videoThumbnail = document.getElementById("jsVideoThumbnail");
-const videoPlayerThumbnail = document.querySelector("#jsVideoThumbnail video");
+const videoBlock= document.getElementById("jsVideoBlock");
+const videoBlockPlayer = document.querySelector("#jsVideoBlock video");
 
 function handleAutoPlay(event) {
     event.target.play();
@@ -11,11 +11,11 @@ function handleAutoEnd(event) {
   }
 
 function init(){
-    videoPlayerThumbnail.volume = 0;
-    videoPlayerThumbnail.addEventListener("mouseover", handleAutoPlay);
-    videoPlayerThumbnail.addEventListener("mouseout", handleAutoEnd);
+    videoBlockPlayer.volume = 0;
+    videoBlockPlayer.addEventListener("mouseover", handleAutoPlay);
+    videoBlockPlayer.addEventListener("mouseout", handleAutoEnd);
 }
 
-if (videoThumbnail) {
+if (videoBlock) {
     init();
 }
