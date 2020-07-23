@@ -8,6 +8,7 @@ const fullscreenBtn = document.getElementById("jsFullScreen");
 const currentTime = document.getElementById("currentTime");
 const totalTime = document.getElementById("totalTime");
 const volumeRange = document.getElementById("jsVolume");
+const progressBar = document.querySelector(".progressBar");
 
 const registerView = () => {
     const videoId = window.location.href.split("/videos/")[1];
@@ -96,8 +97,10 @@ function getCurrentTime() {
 }
   
 async function setTotalTime() {
-    const blob = await fetch(videoPlayer.src).then(response => response.blob());
-    const duration = await getBlobDuration(blob);
+    // const blob = await fetch(videoPlayer.src, {mode: "no-cors"}).then(response => response.blob());
+    // console.log(blob);
+    // const duration = await getBlobDuration(blob);
+    const duration = videoPlayer.duration
     const totalTimeString = formatDate(duration);
     totalTime.innerHTML = totalTimeString;
     setInterval(getCurrentTime, 1000);
@@ -127,13 +130,12 @@ function handleTimeUpdate() {
     const progressPercent = Math.floor(
       (videoPlayer.currentTime / videoPlayer.duration) * 100
     );
-  
     progressBar.style.width = `${progressPercent}%`;
   }
 
 function init(){
     videoPlayer.volume = 0.5;
-    playBtn.addEventListener("click", handlePlayClick);
+    videoPlayer.addEventListener("click", handlePlayClick);
     volumeBtn.addEventListener("click", handleVolumeClick);
     fullscreenBtn.addEventListener("click", goFullScreen);
     videoPlayer.addEventListener("timeupdate", handleTimeUpdate);

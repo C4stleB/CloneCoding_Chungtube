@@ -1,6 +1,6 @@
 mixin videoPlayer(video ={})
     .videoPlayer#jsVideoPlayer
-        video(src=video.src)
+        video(src=video.src , preload="auto")
         .videoPlayer__controls        
             .videoPlayer__column
                 span#jsPlayBtn
@@ -8,8 +8,7 @@ mixin videoPlayer(video ={})
             .videoPlayer__column
                 .fullBar
                     .progressBar
-            .videoPlayer__column   
-                span
+                .timeBar
                     span#currentTime 00:00:00
                     span / 
                     span#totalTime 00:00:00

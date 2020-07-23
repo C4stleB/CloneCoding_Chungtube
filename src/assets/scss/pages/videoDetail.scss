@@ -9,6 +9,8 @@
       width: 100%;
       max-width: 100%;
       margin-top: 25px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid #a0a0a0;
       button {
         width: 100px;
         margin-bottom: 25px;
@@ -38,6 +40,7 @@
     .video__comments {
       margin-top: 25px;
       text-align: center;
+      max-width: 100%;
       .video__comment-number {
         font-size: 18px;
       }
@@ -51,15 +54,38 @@
       .video__comments-list {
         margin-top: 50px;
         li {
-          background-color: #115973;
-          color: white;
-          padding: 15px;
-          border-radius: 20px;
-          border-bottom-left-radius: 0px;
+          display: flex;
+          flex-direction: row;
           &:not(:last-child) {
             margin-bottom: 15px;
           }
+          display: flex;
+          align-items: center;
+          .comment_creator{
+            background-color: #115973;
+            color: white;
+            padding: 15px;
+          }
+          .comment_text{
+            max-width: 100%;
+            background-color: $black;
+            color: white;
+            padding: 15px;
+
+          }
+          .comment_delBtn {
+            margin-left: 10px;
+            font-size: 15px;
+            padding: 5px;
+            background-color: white;
+            border: 2px solid $black;
+            border-radius: 25px;
+            color: $black;
+            cursor: pointer;
+          }
+          
         }
       }
+
     }
   }
