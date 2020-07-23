@@ -1,5 +1,5 @@
 const videoBlock= document.getElementById("jsVideoBlock");
-let videoBlockPlayer = document.querySelector("#jsVideoBlock video");
+const videoBlockPlayer = document.querySelectorAll("#jsVideoBlock video");
 
 function handleAutoPlay(event) {
     event.target.play();
@@ -11,9 +11,11 @@ function handleAutoEnd(event) {
   }
 
 function init(){
-    videoBlockPlayer.volume = 0;
-    videoBlockPlayer.addEventListener("mouseover", handleAutoPlay);
-    videoBlockPlayer.addEventListener("mouseout", handleAutoEnd);
+    videoBlockPlayer.forEach(function(player){
+      player.volume = 0;
+      player.addEventListener("mouseover", handleAutoPlay);
+      player.addEventListener("mouseout", handleAutoEnd);
+    })
 }
 
 if (videoBlock) {
