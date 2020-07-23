@@ -3,12 +3,12 @@ const videoBlockPlayer = document.querySelectorAll("#jsVideoBlock video");
 
 function handleAutoPlay(event) {
     event.target.play();
-    setTimeout(event.target.currentTime = 3000, 1000);
+    setInterval(event.target.currentTime = 30, 5000);
   }
 
 function handleAutoEnd(event) {
     event.target.pause();
-    event.target.currentTime = 3000;
+    event.target.currentTime = 30;
   }
 
 function init(){
