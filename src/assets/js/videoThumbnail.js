@@ -1,14 +1,17 @@
 const videoThumbnail = document.getElementById("jsVideoThumbnail");
+const videoPlayerThumbnail = document.querySelector("#jsVideoThumbnail video");
 
-function handleAutoPlay() {
-    videoThumbnail.play();
+function handleAutoPlay(event) {
+    event.target.play();
   }
 
-function handleAutoEnd() {
-    videoThumbnail.currentTime = 0;
+function handleAutoEnd(event) {
+    event.target.pause();
+    event.target.currentTime = 0;
   }
 
 function init(){
+    videoPlayerThumbnail.volume = 0;
     videoThumbnail.addEventListener("mouseover", handleAutoPlay);
     videoThumbnail.addEventListener("mouseout", handleAutoEnd);
 }
