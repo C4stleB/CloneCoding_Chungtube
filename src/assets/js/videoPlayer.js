@@ -138,6 +138,6 @@ if(videoContainer){
     init();
 }
 
-if(videoDetail){
-    registerView();
-}
+// if(videoDetail){
+//     registerView();
+// }
