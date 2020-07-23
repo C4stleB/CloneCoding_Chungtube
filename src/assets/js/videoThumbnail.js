@@ -15,7 +15,7 @@ function init(){
       player.volume = 0;
       player.addEventListener("mouseover", handleAutoPlay);
       player.addEventListener("mouseout", handleAutoEnd);
-    })
+    });
 }
 
 if (videoBlock) {
