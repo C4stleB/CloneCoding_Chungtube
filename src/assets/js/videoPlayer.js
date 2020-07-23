@@ -1,6 +1,5 @@
 import getBlobDuration from "get-blob-duration";
 
-const videoDetail = document.getElementById("jsVideoDetail");
 const videoContainer = document.getElementById("jsVideoPlayer");
 const videoPlayer = document.querySelector("#jsVideoPlayer video");
 const playBtn = document.getElementById("jsPlayBtn");
@@ -137,7 +136,3 @@ function init(){
 if(videoContainer){
     init();
 }
-
-// if(videoDetail){
-//     registerView();
-// }
