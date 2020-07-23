@@ -12,8 +12,8 @@ function handleAutoEnd(event) {
 
 function init(){
     videoPlayerThumbnail.volume = 0;
-    videoThumbnail.addEventListener("mouseover", handleAutoPlay);
-    videoThumbnail.addEventListener("mouseout", handleAutoEnd);
+    videoPlayerThumbnail.addEventListener("mouseover", handleAutoPlay);
+    videoPlayerThumbnail.addEventListener("mouseout", handleAutoEnd);
 }
 
 if (videoThumbnail) {
