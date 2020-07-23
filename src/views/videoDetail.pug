@@ -37,5 +37,5 @@ block content
                         a(href=routes.userDetail(comment.creator))
                             span.comment_creator=comment.name
                         span.comment_text=comment.text
-                        if comment.creator == loggedUser.id
+                        if loggedUser && comment.creator == loggedUser.id
                             .comment_delBtn(id=comment.id) ✖
