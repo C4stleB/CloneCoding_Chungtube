@@ -47,6 +47,7 @@ const addComment = (comment, comment_id, creator_name, creator_id) => {
     delBtn.innerHTML = "✖";
     delBtn.className = "comment_delBtn";
     delBtn.id = comment_id
+    delBtn.addEventListener("click", deleteComment)
     link.appendChild(span_creator);
     li.appendChild(link);
     li.appendChild(span_text);
