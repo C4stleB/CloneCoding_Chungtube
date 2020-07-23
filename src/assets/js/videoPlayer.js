@@ -135,6 +135,7 @@ function handleTimeUpdate() {
 
 function init(){
     videoPlayer.volume = 0.5;
+    handlePlayClick()
     videoPlayer.addEventListener("click", handlePlayClick);
     volumeBtn.addEventListener("click", handleVolumeClick);
     fullscreenBtn.addEventListener("click", goFullScreen);
