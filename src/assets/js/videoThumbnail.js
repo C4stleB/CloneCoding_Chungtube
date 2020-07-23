@@ -1,5 +1,5 @@
 const videoBlock= document.getElementById("jsVideoBlock");
-const videoBlockPlayer = document.querySelector("#jsVideoBlock video");
+let videoBlockPlayer = document.querySelector("#jsVideoBlock video");
 
 function handleAutoPlay(event) {
     event.target.play();
