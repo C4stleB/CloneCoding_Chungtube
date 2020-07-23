@@ -13,6 +13,7 @@ function handleAutoEnd(event) {
 function init(){
     videoBlockPlayer.forEach(function(player){
       player.volume = 0;
+      player.currentTime = 30000;
       player.addEventListener("mouseover", handleAutoPlay);
       player.addEventListener("mouseout", handleAutoEnd);
     });
